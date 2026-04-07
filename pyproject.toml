@@ -1,0 +1,20 @@
+[project]
+name = "ml-project"
+version = "0.1.0"
+description = "ML project with MLflow and DagsHub"
+authors = [{ name = "your-name" }]
+requires-python = ">=3.9"
+
+dependencies = [
+    "dagshub",
+    "mlflow",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "pandas",
+    "numpy"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
