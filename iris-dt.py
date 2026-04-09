@@ -19,8 +19,8 @@ y = iris.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Define the parameters for the Random Forest model
-max_depth = 6
-
+max_depth = 3
+print(y_train)
 # apply mlflow
 
 mlflow.set_experiment('iris-dt')
@@ -65,9 +65,13 @@ with mlflow.start_run():
 
     test_df = X_test
     test_df['target'] = y_test
+    
+    # you have to make the dataframes mlflow loggable by converting them into mlflow desired format.
 
+    train_df = mlflow.data.from_pandas(train_df)
+    test_df = mlflow.data.from_pandas(test_df)
     mlflow.log_input(train_df , 'Training Data')
-    mlflow.log_input(test_df , 'Testing Data')
+    mlflow.log_input(test_df , 'Validation Data')
 
     print('accuracy', accuracy)
 
