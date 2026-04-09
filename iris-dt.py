@@ -60,5 +60,14 @@ with mlflow.start_run():
     mlflow.set_tag('author','avanindra')
     mlflow.set_tag('model','decision tree')
 
+    train_df = X_train
+    train_df['target'] = y_train
+
+    test_df = X_test
+    test_df['target'] = y_test
+
+    mlflow.log_input(train_df , 'Training Data')
+    mlflow.log_input(test_df , 'Testing Data')
+
     print('accuracy', accuracy)
 
