@@ -1,4 +1,5 @@
 import mlflow
+import pandas as pd
 import mlflow.sklearn
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
@@ -60,10 +61,10 @@ with mlflow.start_run():
     mlflow.set_tag('author','avanindra')
     mlflow.set_tag('model','decision tree')
 
-    train_df = X_train
+    train_df = pd.DataFrame(X_train, columns=iris.feature_names)
     train_df['target'] = y_train
 
-    test_df = X_test
+    test_df = pd.DataFrame(X_test, columns=iris.feature_names)
     test_df['target'] = y_test
     
     # you have to make the dataframes mlflow loggable by converting them into mlflow desired format.
