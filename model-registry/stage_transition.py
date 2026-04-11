@@ -11,12 +11,12 @@ model_name = "diabities-rf"
 model_version = 3  # Replace with the specific version number you want to transition
 
 # Transition the model version to a new stage
-new_stage = "Staging"  # Possible values: "None", "Staging", "Production", "Archived"
+new_stage = "Production"  # Possible values: "None", "Staging", "Production", "Archived"
 client.transition_model_version_stage(
     name=model_name,
     version=model_version,
     stage=new_stage,
-    archive_existing_versions=False
+    archive_existing_versions=True
 )
 
 print(f"Model version {model_version} transitioned to {new_stage}")
