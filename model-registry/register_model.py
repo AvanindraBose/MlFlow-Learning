@@ -19,7 +19,7 @@ run_id = "20c38b112353432292af0fa5e4fdca15"
 model_uri = f"runs:/{run_id}/random_forest"
 
 # Register the model in the model registry
-model_name = "diabetes-rf"
+model_name = "diabities-rf"
 result = mlflow.register_model(model_uri, model_name)
 
 import time
