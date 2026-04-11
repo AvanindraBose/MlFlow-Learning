@@ -10,7 +10,7 @@ dagshub.init(repo_owner='AvanindraBose', repo_name='MlFlow-Learning', mlflow=Tru
 client = MlflowClient()
 
 # Replace with the run_id of the run where the model was logged
-run_id = "20c38b112353432292af0fa5e4fdca15"
+run_id = "6c824ecc9cb44edc8e88a9fc7dcb69ec"
 
 # Replace with the path to the logged model within the run
 # model_path = "file:///C:/Users/Nitish/Desktop/mlops/model-registry-demo/mlruns/406765814162474516/ee2671fb022c47f89c27c9aa3ef25f42/artifacts/random_forest"
