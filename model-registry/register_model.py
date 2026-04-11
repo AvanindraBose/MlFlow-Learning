@@ -1,8 +1,12 @@
 # client demo
-
 from mlflow.tracking import MlflowClient
 import mlflow
+import dagshub
 # Initialize the MLflow Client
+
+mlflow.set_tracking_uri("https://dagshub.com/AvanindraBose/MlFlow-Learning.mlflow")
+dagshub.init(repo_owner='AvanindraBose', repo_name='MlFlow-Learning', mlflow=True)
+
 client = MlflowClient()
 
 # Replace with the run_id of the run where the model was logged
