@@ -1,6 +1,6 @@
 This Repo will help Avanindra to learn about mlflow basics that knwledge will be used for making production grade projects.
 
-# Nuiances of MLFlow Tracking Server
+# Nuances of MLFlow Tracking Server
 ![alt text](image.png)
 
 # ML artifacts folder structure
